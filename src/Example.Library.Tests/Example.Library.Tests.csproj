@@ -2,7 +2,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Example.Library\Example.Library.csproj" />
   </ItemGroup>
-
-  <Import Project="..\Common.props" />
-  <Import Project="..\Common.UnitTests.props" />
 </Project>
