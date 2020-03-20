@@ -3,6 +3,7 @@
 
 namespace Resume
 {
+    using System;
     using Example.Library;
 
     /// <summary>
@@ -15,6 +16,7 @@ namespace Resume
         /// </summary>
         public static void Main()
         {
+            Console.WriteLine("Hello world!");
             Foo.Bar();
         }
     }
