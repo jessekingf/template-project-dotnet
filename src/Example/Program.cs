@@ -1,7 +1,7 @@
 ﻿// Licensed under the MIT License.
 // See LICENSE.txt in the project root for license information.
 
-namespace Resume
+namespace Example
 {
     using System;
     using Example.Library;
