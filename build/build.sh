@@ -15,7 +15,7 @@ config=Release
 
 # Clean
 echo Cleaning...
-rm -f -r $dist
+rm -rf $dist
 dotnet clean "$sln" -c $config
 
 # Build
@@ -25,7 +25,7 @@ dotnet build "$sln" -c $config --no-restore --no-incremental
 
 # Run unit tests
 echo Running tests...
-dotnet test "$sln" -c $config --no-restore --no-build --collect:"XPlat Code Coverage" --results-directory:"$coverageDir"
+dotnet test "$sln" -c $config --no-restore --no-build --collect "XPlat Code Coverage" --results-directory "$coverageDir" --settings "$src/Coverlet.runsettings"
 if [ -d "$coverageDir" ]; then
   reportgenerator -reports:"$coverageDir/*/*.xml" -targetdir:"$coverageDir" -reporttypes:HtmlSummary -title:"Unit Test Coverage"
 fi

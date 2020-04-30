@@ -15,15 +15,19 @@ Goals:
 
 To build the example solution the following must be installed:
 
+- [Git for Windows](https://gitforwindows.org/)
+  - Ensure to select Git BASH in the installer
+  - Git BASH is assumed for all commands below
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
   - Workloads:
     - .Net desktop development
     - .NET Core cross-platform development
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/visual-studio-sdks)
   - Note this may already be installed with the Visual Studio install or patches
-  - Check your version by running: `dotnet --version`
-- [Git for Windows](https://gitforwindows.org/)
-  - Ensure to select Git BASH in the installer
+  - Check your version by running:
+    ```shell
+    dotnet --version
+    ```
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
     ```shell
@@ -95,7 +99,7 @@ More details on the structure and files below.
 ## Project Files
 
 All projects in the sample use the new [SDK-style](https://docs.microsoft.com/en-us/nuget/resources/check-project-format) project format.
-SDK-Style projects have a number of advantages over the traditional csproj files:
+SDK-Style projects have several advantages over the traditional csproj files:
 
 - Very lightweight compared to traditional csproj files
   - Package references are simplified
@@ -177,7 +181,7 @@ Also note the ```.editorconfig``` in the root of the repository. This enforces t
 
 The project has been setup with the default rule-sets. Rules can be tweaked in the ```CodeAnalysis.ruleset``` file under the ```src``` directory.
 
-## Dotnet CLI
+## Build and Publish
 
 Below covers the commands to build, test, and publish with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools).
 These commands can be used from your CI/CD platform.
@@ -211,7 +215,8 @@ dotnet test Example.sln
 A code coverage report can be generated with [Coverlet](https://github.com/tonerdo/coverlet) with the following options:
 
 ```shell
-dotnet test Example.sln --collect:"XPlat Code Coverage" --results-directory:"../dist/Coverage"
+rm -rf ../dist/Coverage
+dotnet test Example.sln --collect "XPlat Code Coverage" --results-directory "../dist/Coverage" --settings "Coverlet.runsettings"
 ```
 
 This generates a [Cobertura](https://github.com/cobertura/cobertura) report (XML) for each project.
@@ -231,7 +236,7 @@ Custom targets using `nuget.exe` and `.nuspec` files are not required for most p
 To allow a project to be packaged set `IsPackable` to true in the project settings.
 If all projects in the solution are to be packaged this can be set in `Directory.Build.props`.
 
-All other meta-data for the package will come from the common properties as well, except for the package description, which is generally project specific.
+All other meta-data for the package will come from the common properties as well, except for the package description, which is generally project-specific.
 
 Project settings:
 
@@ -245,7 +250,7 @@ Project settings:
 To build the packages for the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli):
 
 ```shell
-dotnet pack Example.sln
+dotnet pack Example.sln -o "../dist/Packages"
 ```
 
 [dotnet nuget push](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push) can then be used to publish the packages to the desired server.
