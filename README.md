@@ -6,7 +6,7 @@ This can be used as a template when starting a new project/repository.
 Goals:
 
 1. Project files are small and simple enough to hand-edit
-2. Code analysis ([StyleCop](https://github.com/StyleCop/StyleCop) and [FxCop](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-fxcop-analyzers)) automatically enabled for all projects
+2. Code analysis ([.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop)) automatically enabled for all projects
 3. All common project properties managed in one location
 4. New projects automatically inherit all common project properties
 5. Projects support [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools)
@@ -22,7 +22,7 @@ To build the example solution the following must be installed:
   - Workloads:
     - .Net desktop development
     - .NET Core cross-platform development
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/visual-studio-sdks)
+- [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
   - Note this may already be installed with the Visual Studio install or patches
   - Check your version by running:
     ```shell
@@ -55,10 +55,10 @@ The repository should contain the following general structure.
 |   |   |-- Example.Library.UnitTests.csproj*
 |   |   `-- FooTests.cs*
 |   |-- .editorconfig*
-|   |-- CodeAnalysis.ruleset*
 |   |-- Common.UnitTests.props*
 |   |-- Directory.Build.props*
 |   |-- Example.sln*
+|   |-- GlobalAssemblyInfo.cs*
 |   `-- stylecop.json*
 |-- test/
 |-- .gitattributes*
@@ -126,7 +126,7 @@ All projects automatically import `Directory.Build.props`, which sets all common
   - Author
   - Copyright
 - Target framework version
-- Enables [StyleCop](https://github.com/StyleCop/StyleCop) and [FxCop](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-fxcop-analyzers)
+- Enables [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop)
 - Sets the build version
 - Enables 'Treat warnings' as errors
 - Allows unit test projects access to internals
@@ -175,11 +175,11 @@ Visual Studio can still be used to update project settings, packages and referen
 
 ## Code Analysis
 
-All projects have [StyleCop](https://github.com/StyleCop/StyleCop) and [FxCop](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-fxcop-analyzers) enabled.
+All projects have [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop) enabled.
 This ensures static code analysis is run on every build and all code follows the same style guidelines.
 Also note the ```.editorconfig``` in the root of the repository. This enforces the code to be formatted the same regardless of visual studio preferences.
 
-The project has been setup with the default rule-sets. Rules can be tweaked in the ```CodeAnalysis.ruleset``` file under the ```src``` directory.
+Rules can be tweaked in the `.editorconfig` file under the `src` directory.
 
 ## Build and Publish
 
