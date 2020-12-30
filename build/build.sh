@@ -7,7 +7,7 @@ sln=$src/Example.sln
 mainProj=$src/Example/Example.csproj
 
 dist=../dist
-publishDir=$dist/Publish
+publishDir=$dist/Publish/Example
 packagesDir=$dist/Packages
 coverageDir=$dist/Coverage
 
@@ -39,6 +39,7 @@ echo Creating distribution...
 dotnet publish $mainProj -c $config -o "$publishDir" -r win-x64 -p:PublishSingleFile=true --self-contained false
 cp ../LICENSE.txt "$publishDir"
 rm -f "$publishDir"/*.pdb
+rm -f "$publishDir"/*.xml
 
 # Build succeeded
 echo Build successful
