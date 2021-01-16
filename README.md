@@ -1,4 +1,4 @@
-# Example .NET Repository
+# .NET Template Project
 
 An example repository demonstrating best practices for structuring and managing .NET projects.
 This can be used as a template when starting a new project/repository.
