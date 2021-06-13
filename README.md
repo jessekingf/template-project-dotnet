@@ -20,14 +20,11 @@ To build the example solution the following must be installed:
   - Git BASH is assumed for all commands below
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
   - Workloads:
-    - .Net desktop development
+    - .NET desktop development
     - .NET Core cross-platform development
-- [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
-  - Note this may already be installed with the Visual Studio install or patches
-  - Check your version by running:
-    ```shell
-    dotnet --version
-    ```
+  - Individual components:
+    - .NET 5.0 Runtime
+    - Github Extension for Visual Studio
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
     ```shell
@@ -58,7 +55,6 @@ The repository should contain the following general structure.
 |   |-- Common.UnitTests.props*
 |   |-- Directory.Build.props*
 |   |-- Example.sln*
-|   |-- GlobalAssemblyInfo.cs*
 |   `-- stylecop.json*
 |-- test/
 |-- .gitattributes*
@@ -186,18 +182,14 @@ Rules can be tweaked in the `.editorconfig` file under the `src` directory.
 Below covers the commands to build, test, and publish with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools).
 These commands can be used from your CI/CD platform.
 
-All instructions start from the `src` directory, unless specified otherwise:
-
-```shell
-cd src
-```
+All commands are assumed to be run from the root of the repository.
 
 ### Building
 
 To build the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build):
 
 ```shell
-dotnet build Example.sln
+dotnet build src/Example.sln
 ```
 
 Note that `dotnet build` will automatically [restore packages](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore).
@@ -207,7 +199,7 @@ Note that `dotnet build` will automatically [restore packages](https://docs.micr
 To run all unit tests in the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test):
 
 ```shell
-dotnet test Example.sln
+dotnet test src/Example.sln
 ```
 
 ### Test Coverage
@@ -215,8 +207,8 @@ dotnet test Example.sln
 A code coverage report can be generated with [Coverlet](https://github.com/tonerdo/coverlet) with the following options:
 
 ```shell
-rm -rf ../dist/Coverage
-dotnet test Example.sln --collect "XPlat Code Coverage" --results-directory "../dist/Coverage" --settings "Coverlet.runsettings"
+rm -rf dist/Coverage
+dotnet test src/Example.sln --collect "XPlat Code Coverage" --results-directory "dist/Coverage" --settings "Coverlet.runsettings"
 ```
 
 This generates a [Cobertura](https://github.com/cobertura/cobertura) report (XML) for each project.
@@ -225,7 +217,7 @@ These reports can be integrated with your CI/CD platform or used with external t
 To generate an HTML report with [ReportGenerator](https://github.com/danielpalme/ReportGenerator):
 
 ```shell
-reportgenerator -reports:"../dist/Coverage/*/*.xml" -targetdir:"../dist/Coverage" -reporttypes:HtmlSummary -title:"Unit Test Coverage"
+reportgenerator -reports:"dist/Coverage/*/*.xml" -targetdir:"dist/Coverage" -reporttypes:HtmlSummary -title:"Unit Test Coverage"
 ```
 
 ### NuGet Packages
@@ -250,7 +242,7 @@ Project settings:
 To build the packages for the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli):
 
 ```shell
-dotnet pack Example.sln -o "../dist/Packages"
+dotnet pack src/Example.sln -o "../dist/Packages"
 ```
 
 [dotnet nuget push](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push) can then be used to publish the packages to the desired server.
@@ -266,10 +258,10 @@ See the following links for additional details:
 To publish an official build with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish):
 
 ```shell
-dotnet publish Example/Example.csproj -o "../dist/Publish"
+dotnet publish src/Example/Example.csproj -o "../dist/Publish"
 ```
 
-The publish command also has options for including .NET runtime dependencies and publishing as a [single executable](https://www.c-sharpcorner.com/article/creating-trimmed-self-contained-single-executable-using-net-core-3-0/).
+The publish command also has options for including .NET runtime dependencies and publishing as a [single executable](https://docs.microsoft.com/en-us/dotnet/core/deploying/single-file).
 
 ### Sample Build Script
 
