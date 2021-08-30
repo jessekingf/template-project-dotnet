@@ -28,7 +28,7 @@ To build the example solution the following must be installed:
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
     ```shell
-    dotnet tool install -g dotnet-reportgenerator-globaltool
+    dotnet tool install --global dotnet-reportgenerator-globaltool
     ```
 
 ## Repository Structure
@@ -52,6 +52,7 @@ The repository should contain the following general structure.
 |   |   |-- Example.Library.UnitTests.csproj*
 |   |   `-- FooTests.cs*
 |   |-- .editorconfig*
+|   |-- .globalconfig*
 |   |-- Common.UnitTests.props*
 |   |-- Directory.Build.props*
 |   |-- Example.sln*
@@ -172,10 +173,9 @@ Visual Studio can still be used to update project settings, packages and referen
 ## Code Analysis
 
 All projects have [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop) enabled.
-This ensures static code analysis is run on every build and all code follows the same style guidelines.
-Also note the ```.editorconfig``` in the root of the repository. This enforces the code to be formatted the same regardless of visual studio preferences.
+This ensures static code analysis is run on every build and all code follows the same style guidelines. Rules can be tweaked in the `.globalconfig` file under the `src` directory.
 
-Rules can be tweaked in the `.editorconfig` file under the `src` directory.
+Also note the `.editorconfig` under the `src` directory. This enforces the code to be formatted the same regardless of visual studio preferences.
 
 ## Build and Publish
 
@@ -284,3 +284,19 @@ cd build
 ```
 
 After running the script the published build, packages, and reports can be found in the `dist` folder.
+
+## After Cloning the Template
+
+After cloning the template, update the following for your project:
+
+1. Update the author, copyright, and product information in `Directory.Build.props`
+2. Rename the solution and project files
+3. Update the build script for the project renames
+4. ???
+5. Profit!
+
+## TODO
+
+1. Setup [GitHub Actions](https://github.com/features/actions)
+2. Linux builds
+3. Replace StyleCop with "Enforce CodeStyle on build" project setting (currently experimental)?
