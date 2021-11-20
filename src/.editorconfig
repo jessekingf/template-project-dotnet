@@ -15,7 +15,7 @@ charset = utf-8-bom
 indent_size = 4
 
 # Project files
-[*.{csproj,sln}]
+[*.{csproj,sln,props,targets}]
 indent_size = 2
 
 # Configuration files

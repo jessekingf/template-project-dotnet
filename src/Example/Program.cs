@@ -1,23 +1,21 @@
 ﻿// Licensed under the MIT License.
 // See LICENSE.txt in the project root for license information.
 
-namespace Example
-{
-    using System;
-    using Example.Library;
+namespace Example;
 
+using Example.Library;
+
+/// <summary>
+/// The entry class of the application.
+/// </summary>
+internal class Program
+{
     /// <summary>
-    /// The entry class of the application.
+    /// Defines the entry point of the application.
     /// </summary>
-    internal class Program
+    public static void Main()
     {
-        /// <summary>
-        /// Defines the entry point of the application.
-        /// </summary>
-        public static void Main()
-        {
-            Console.WriteLine("Hello world!");
-            Foo.Bar();
-        }
+        Console.WriteLine("Hello world!");
+        Foo.Bar();
     }
 }
