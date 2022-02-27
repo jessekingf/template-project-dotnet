@@ -11,7 +11,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -27,6 +27,10 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <IsTestProject>false</IsTestProject>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CA1014</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
