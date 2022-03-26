@@ -23,7 +23,7 @@ To build the example solution the following must be installed:
     - .NET desktop development
     - .NET Core cross-platform development
   - Individual components:
-    - .NET 5.0 Runtime
+    - .NET 6.0 Runtime
     - Github Extension for Visual Studio
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
@@ -170,12 +170,17 @@ dotnet new classlib -n ProjectName
 
 Visual Studio can still be used to update project settings, packages and references.
 
-## Code Analysis
+## Code Style and Analysis
 
-All projects have [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop) enabled.
-This ensures static code analysis is run on every build and all code follows the same style guidelines. Rules can be tweaked in the `.globalconfig` file under the `src` directory.
+### Code Analysis
 
-Also note the `.editorconfig` under the `src` directory. This enforces the code to be formatted the same regardless of visual studio preferences.
+All projects have both [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop) enabled.
+This ensures static code analysis gets run on every build and all code follows the same style guidelines. The rules can be tweaked in the `.globalconfig` file under the `src` directory.
+
+### Code Formatting
+
+The `.editorconfig` file enforces consistent formatting, regardless of the Visual Studio settings.
+This allows files to be auto-formatted in Visual Studio and have them comply with the default StyleCop rules.
 
 ## Build and Publish
 
@@ -294,9 +299,3 @@ After cloning the template, update the following for your project:
 3. Update the build script for the project renames
 4. ???
 5. Profit!
-
-## TODO
-
-1. Setup [GitHub Actions](https://github.com/features/actions)
-2. Linux builds
-3. Replace StyleCop with "Enforce CodeStyle on build" project setting (currently experimental)?
