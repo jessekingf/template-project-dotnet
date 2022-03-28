@@ -39,29 +39,30 @@ The repository should contain the following general structure.
 .
 |-- docs/
 |-- build/
-|   `-- build.sh*
+|   |-- build.sh
 |-- dist/
 |-- src/
 |   |-- Example/
-|   |   |-- Example.csproj*
-|   |   `-- Program.cs*
+|   |   |-- Example.csproj
+|   |   |-- Program.cs
 |   |-- Example.Library/
-|   |   |-- Example.Library.csproj*
-|   |   `-- Foo.cs*
+|   |   |-- Example.Library.csproj
+|   |   |-- Foo.cs
 |   |-- Example.Library.UnitTests/
-|   |   |-- Example.Library.UnitTests.csproj*
-|   |   `-- FooTests.cs*
-|   |-- .editorconfig*
-|   |-- .globalconfig*
-|   |-- Common.UnitTests.props*
-|   |-- Directory.Build.props*
-|   |-- Example.sln*
-|   `-- stylecop.json*
+|   |   |-- Example.Library.UnitTests.csproj
+|   |   |-- FooTests.cs
+|   |-- .editorconfig
+|   |-- .globalconfig
+|   |-- Common.UnitTests.props
+|   |-- Directory.Build.props
+|   |-- Example.sln
+|   |-- stylecop.json
 |-- test/
-|-- .gitattributes*
-|-- .gitignore*
-|-- LICENSE.txt*
-`-- README.md*
+|-- .gitattributes
+|-- .gitignore
+|-- LICENSE.txt
+|-- README.md
+|-- version.json
 ```
 
 ### Root Directory
@@ -90,6 +91,8 @@ The repository should contain the following general structure.
   - You are reading it right now
   - Contains information on the project/repository
   - Written in [Markdown](https://guides.github.com/features/mastering-markdown/)
+- version.json
+  - Application version configuration (more details below)
 
 More details on the structure and files below.
 
@@ -124,7 +127,7 @@ All projects automatically import `Directory.Build.props`, which sets all common
   - Copyright
 - Target framework version
 - Enables [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop)
-- Sets the build version
+- Sets the build version (more details below)
 - Enables 'Treat warnings' as errors
 - Allows unit test projects access to internals
 
@@ -169,6 +172,12 @@ dotnet new classlib -n ProjectName
 ```
 
 Visual Studio can still be used to update project settings, packages and references.
+
+## Versioning
+
+[Git Versioning](https://github.com/dotnet/Nerdbank.GitVersioning) is used to version the assemblies on build.
+By default, the major and minor versions are configured in `version.json`, and the patch version is automatically bumped on each commit.
+This setup makes it easier to follow [Semantic Versioning](https://semver.org/) and to have a unique version for every build.
 
 ## Code Style and Analysis
 

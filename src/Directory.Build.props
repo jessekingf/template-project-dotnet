@@ -1,6 +1,5 @@
 ﻿<Project>
   <PropertyGroup>
-    <Version>0.1.0</Version>
     <Product>Example Solution</Product>
     <Authors>Jesse King</Authors>
     <Copyright>Copyright (c) Jesse King</Copyright>
@@ -47,6 +46,7 @@
     <PackageReference Include="StyleCop.Analyzers.Error" Version="1.0.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.244" />
   </ItemGroup>
 
   <Import Project="Common.UnitTests.props" Condition="$(MSBuildProjectName.EndsWith('.Tests'))" />
