@@ -25,6 +25,10 @@ To build the example solution the following must be installed:
   - Individual components:
     - .NET 6.0 Runtime
     - Github Extension for Visual Studio
+  - Recommended extensions:
+    - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
+    - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
+    - [Spell Checker](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater)
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
     ```shell
