@@ -42,8 +42,10 @@
     <PackageReference Include="StyleCop.Analyzers.Error" Version="1.0.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.255" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.255">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
-  <Import Project="Common.UnitTests.props" Condition="$(MSBuildProjectName.EndsWith('.Tests'))" />
+  <Import Project="Common.Tests.props" Condition="$(MSBuildProjectName.EndsWith('.Tests'))" />
 </Project>
