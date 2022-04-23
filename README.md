@@ -6,7 +6,7 @@ This can be used as a template when starting a new project/repository.
 Goals:
 
 1. Project files are small and simple enough to hand-edit
-2. Code analysis ([.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop)) automatically enabled for all projects
+2. Code analysis ([.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)) automatically enabled for all projects
 3. All common project properties managed in one location
 4. New projects automatically inherit all common project properties
 5. Projects support [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools)
@@ -18,7 +18,7 @@ To build the example solution the following must be installed:
 - [Git for Windows](https://gitforwindows.org/)
   - Ensure to select Git BASH in the installer
   - Git BASH is assumed for all commands below
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
   - Workloads:
     - .NET desktop development
     - .NET Core cross-platform development
@@ -27,8 +27,8 @@ To build the example solution the following must be installed:
     - Github Extension for Visual Studio
   - Recommended extensions:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
-    - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
     - [Spell Checker](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater)
+    - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
     ```shell
@@ -130,7 +130,7 @@ All projects automatically import `Directory.Build.props`, which sets all common
   - Author
   - Copyright
 - Target framework version
-- Enables [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop)
+- Enables [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)
 - Sets the build version (more details below)
 - Enables 'Treat warnings' as errors
 - Allows unit test projects access to internals
@@ -187,13 +187,13 @@ This setup makes it easier to follow [Semantic Versioning](https://semver.org/) 
 
 ### Code Analysis
 
-All projects have both [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/StyleCop/StyleCop) enabled.
+All projects have both [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) enabled.
 This ensures static code analysis gets run on every build and all code follows the same style guidelines. The rules can be tweaked in the `.globalconfig` file under the `src` directory.
 
 ### Code Formatting
 
 The `.editorconfig` file enforces consistent formatting, regardless of the Visual Studio settings.
-This allows files to be auto-formatted in Visual Studio and have them comply with the default StyleCop rules.
+This allows files to be auto-formatted in Visual Studio to comply with StyleCop.
 
 ## Build and Publish
 
