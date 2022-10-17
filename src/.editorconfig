@@ -22,7 +22,7 @@ indent_size = 2
 indent_size = 2
 
 # Web files
-[*.{htm,html,js,ts}]
+[*.{htm,html,js,ts,css}]
 indent_size = 2
 
 # C# files

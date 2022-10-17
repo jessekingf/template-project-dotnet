@@ -21,10 +21,8 @@ To build the example solution the following must be installed:
 - [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
   - Workloads:
     - .NET desktop development
-    - .NET Core cross-platform development
   - Individual components:
-    - .NET 6.0 Runtime
-    - Github Extension for Visual Studio
+    - .NET 6.0 Runtime (LTS)
   - Recommended extensions:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
     - [Spell Checker](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater)
