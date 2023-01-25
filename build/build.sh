@@ -36,7 +36,7 @@ dotnet pack "$sln" -c $config -o "$packagesDir" --no-restore --no-build
 
 # Create distribution
 echo Creating distribution...
-dotnet publish $mainProj -c $config -o "$publishDir" -r win-x64 --self-contained true
+dotnet publish $mainProj -c $config -o "$publishDir"
 rm -f "$publishDir"/*.pdb
 rm -f "$publishDir"/*.xml
 
