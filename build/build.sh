@@ -7,7 +7,7 @@ sln=$src/Example.sln
 mainProj=$src/Example/Example.csproj
 
 dist=../dist
-publishDir=$dist/Publish/Example
+publishDir=$dist/Publish
 packagesDir=$dist/Packages
 coverageDir=$dist/Coverage
 
