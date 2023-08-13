@@ -25,7 +25,6 @@ To build the example solution the following must be installed:
     - .NET 6.0 Runtime (LTS)
   - Recommended extensions:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
-    - [Spell Checker](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater)
     - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
@@ -258,7 +257,7 @@ Project settings:
 To build the packages for the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli):
 
 ```shell
-dotnet pack src/Example.sln -o "../dist/Packages"
+dotnet pack src/Example.sln -o "dist/Packages"
 ```
 
 [dotnet nuget push](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push) can then be used to publish the packages to the desired server.
@@ -274,7 +273,7 @@ See the following links for additional details:
 To publish an official build with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish):
 
 ```shell
-dotnet publish src/Example/Example.csproj -o "../dist/Publish"
+dotnet publish src/Example/Example.csproj -o "dist/Publish"
 ```
 
 The publish command also has options for including .NET runtime dependencies and publishing as a [single executable](https://docs.microsoft.com/en-us/dotnet/core/deploying/single-file).
