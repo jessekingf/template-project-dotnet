@@ -22,7 +22,7 @@ To build the example solution the following must be installed:
   - Workloads:
     - .NET desktop development
   - Individual components:
-    - .NET 6.0 Runtime (LTS)
+    - .NET 8.0 Runtime
   - Recommended extensions:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
     - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
@@ -59,7 +59,6 @@ The repository should contain the following general structure.
 |   |-- Example.sln
 |   |-- stylecop.json
 |-- test/
-|-- .gitattributes
 |-- .gitignore
 |-- LICENSE.txt
 |-- README.md

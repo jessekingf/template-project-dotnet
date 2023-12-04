@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9A8DDD1-3ED2-4BEA-8D7E-4A4E4D06C5D3}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		..\.gitattributes = ..\.gitattributes
 		..\.gitignore = ..\.gitignore
 		.globalconfig = .globalconfig
 		..\build\build.sh = ..\build\build.sh
