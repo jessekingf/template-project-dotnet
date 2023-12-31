@@ -1,0 +1,8 @@
+﻿<Project>
+  <PropertyGroup>
+    <Product>Example Solution</Product>
+    <Authors>Jesse King</Authors>
+    <Copyright>Copyright (c) Jesse King</Copyright>
+    <NeutralLanguage>en-CA</NeutralLanguage>
+  </PropertyGroup>
+</Project>

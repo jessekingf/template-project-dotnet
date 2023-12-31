@@ -1,16 +1,10 @@
 ﻿<Project>
   <PropertyGroup>
-    <Product>Example Solution</Product>
-    <Authors>Jesse King</Authors>
-    <Copyright>Copyright (c) Jesse King</Copyright>
-    <NeutralLanguage>en-CA</NeutralLanguage>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <NeutralLanguage>en-CA</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -21,6 +15,7 @@
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <AnalysisLevel>latest</AnalysisLevel>
     <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -47,5 +42,6 @@
     </PackageReference>
   </ItemGroup>
 
+  <Import Project="Common.Product.props" />
   <Import Project="Common.Tests.props" Condition="$(MSBuildProjectName.EndsWith('.Tests'))" />
 </Project>

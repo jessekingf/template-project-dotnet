@@ -54,7 +54,8 @@ The repository should contain the following general structure.
 |   |   |-- FooTests.cs
 |   |-- .editorconfig
 |   |-- .globalconfig
-|   |-- Common.UnitTests.props
+|   |-- Common.Product.props
+|   |-- Common.Tests.props
 |   |-- Directory.Build.props
 |   |-- Example.sln
 |   |-- stylecop.json
@@ -121,12 +122,13 @@ SDK-Style projects have several advantages over the traditional csproj files:
 
 All projects automatically import `Directory.Build.props`, which sets all common project properties:
 
-- Common meta-data:
+- Common meta-data (imported through `Common.Product.props`):
   - Company name
   - Author
   - Copyright
 - Target framework version
 - Enables [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)
+- Enforces [code style](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-8#code-style-analysis) on build
 - Sets the build version (more details below)
 - Enables 'Treat warnings' as errors
 - Allows unit test projects access to internals
@@ -303,7 +305,7 @@ After running the script the published build, packages, and reports can be found
 
 After cloning the template, update the following for your project:
 
-1. Update the author, copyright, and product information in `Directory.Build.props`
+1. Update the author, copyright, and product information in `Common.Product.props`
 2. Rename the solution and project files
 3. Update the build script for the project renames
 4. ???
