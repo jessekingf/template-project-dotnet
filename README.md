@@ -58,7 +58,6 @@ The repository should contain the following general structure.
 |   |-- Common.Tests.props
 |   |-- Directory.Build.props
 |   |-- Example.sln
-|   |-- stylecop.json
 |-- test/
 |-- .gitignore
 |-- LICENSE.txt

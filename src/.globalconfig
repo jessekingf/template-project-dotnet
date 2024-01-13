@@ -34,3 +34,6 @@ dotnet_diagnostic.CA2008.severity = none
 
 # CA2227: Collection properties should be read only
 dotnet_diagnostic.CA2227.severity = suggestion
+
+# SA1633: File should have header
+dotnet_diagnostic.SA1633.severity = none

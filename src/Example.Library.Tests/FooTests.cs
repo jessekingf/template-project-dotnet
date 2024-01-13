@@ -1,7 +1,4 @@
-﻿// Licensed under the MIT License.
-// See LICENSE.txt in the project root for license information.
-
-namespace Example.Library.Tests;
+﻿namespace Example.Library.Tests;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
