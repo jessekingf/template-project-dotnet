@@ -18,7 +18,7 @@ charset = utf-8
 indent_size = 2
 
 #### Config files ####
-[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct,json,xml}]
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct,json,xml,pubxml}]
 indent_size = 2
 
 #### Web files ####
@@ -98,7 +98,7 @@ csharp_style_var_when_type_is_apparent = false:error
 csharp_style_expression_bodied_accessors = false:warning
 csharp_style_expression_bodied_constructors = false:warning
 csharp_style_expression_bodied_indexers = false:warning
-csharp_style_expression_bodied_lambdas = false:warning
+csharp_style_expression_bodied_lambdas = false:none
 csharp_style_expression_bodied_local_functions = false:warning
 csharp_style_expression_bodied_methods = false:warning
 csharp_style_expression_bodied_operators = false:warning
