@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
@@ -24,7 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Library", "Example.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Library.Tests", "Example.Library.Tests\Example.Library.Tests.csproj", "{42604035-89F8-4B29-8636-09921163F5D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C5ADD515-5933-4F95-B757-85F46C0A3369}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\Setup.md = ..\docs\Setup.md
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(NestedProjects) = preSolution
+		{C5ADD515-5933-4F95-B757-85F46C0A3369} = {A9A8DDD1-3ED2-4BEA-8D7E-4A4E4D06C5D3}
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

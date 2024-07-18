@@ -11,27 +11,6 @@ Goals:
 4. New projects automatically inherit all common project properties
 5. Projects support [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools)
 
-## Prerequisites
-
-To build the example solution the following must be installed:
-
-- [Git for Windows](https://gitforwindows.org/)
-  - Ensure to select Git BASH in the installer
-  - Git BASH is assumed for all commands below
-- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-  - Workloads:
-    - .NET desktop development
-  - Individual components:
-    - .NET 8.0 Runtime
-  - Recommended extensions:
-    - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
-    - [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
-- [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
-  - Install via the following command once .NET Core is installed:
-    ```shell
-    dotnet tool install --global dotnet-reportgenerator-globaltool
-    ```
-
 ## Repository Structure
 
 The repository should contain the following general structure.
@@ -39,6 +18,7 @@ The repository should contain the following general structure.
 ```
 .
 |-- docs/
+|   |-- Setup.md
 |-- build/
 |   |-- build.sh
 |-- dist/
@@ -68,7 +48,8 @@ The repository should contain the following general structure.
 ### Root Directory
 
 - docs/
-  - Contains any project documentation
+  - Setup document for building and publishing the application
+  - Contains any other project documentation
 - build/
   - Contains build and publishing scripts
 - dist/
@@ -194,6 +175,8 @@ This allows files to be auto-formatted in Visual Studio to comply with StyleCop.
 
 ## Build and Publish
 
+Install the prerequisites covered [here](docs/Setup.md).
+
 Below covers the commands to build, test, and publish with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools).
 These commands can be used from your CI/CD platform.
 
@@ -307,5 +290,6 @@ After cloning the template, update the following for your project:
 1. Update the author, copyright, and product information in `Common.Product.props`
 2. Rename the solution and project files
 3. Update the build script for the project renames
-4. ???
-5. Profit!
+4. Update this README
+5. ???
+6. Profit!
