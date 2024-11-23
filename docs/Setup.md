@@ -9,7 +9,7 @@ Install the following prerequisites:
   - Workloads:
     - .NET desktop development
   - Individual components:
-    - .NET 8.0 Runtime (Long Term Support)
+    - .NET 9.0 Runtime
   - Recommended extensions:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
