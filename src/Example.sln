@@ -29,9 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C5ADD515-5
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(NestedProjects) = preSolution
-		{C5ADD515-5933-4F95-B757-85F46C0A3369} = {A9A8DDD1-3ED2-4BEA-8D7E-4A4E4D06C5D3}
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -52,6 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5ADD515-5933-4F95-B757-85F46C0A3369} = {A9A8DDD1-3ED2-4BEA-8D7E-4A4E4D06C5D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CBC4AC3-33C4-4D01-A60C-5D1AD5FE0D3D}
