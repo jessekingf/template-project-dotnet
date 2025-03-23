@@ -206,7 +206,7 @@ A code coverage report can be generated with [Coverlet](https://github.com/toner
 
 ```shell
 rm -rf dist/Coverage
-dotnet test src/Example.sln --collect "XPlat Code Coverage" --results-directory "dist/Coverage" --settings "Coverlet.runsettings"
+dotnet test src/Example.sln --collect "XPlat Code Coverage" --results-directory "dist/Coverage" --settings "coverlet.runsettings"
 ```
 
 This generates a [Cobertura](https://github.com/cobertura/cobertura) report (XML) for each project.

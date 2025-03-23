@@ -1,5 +1,16 @@
 # Prerequisites
 
+## Linux
+
+Install the following prerequisites:
+
+- [Git](https://git-scm.com/downloads)
+- [.NET 9.0 SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux)
+- [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
+  - Install recommended workspace extensions
+
+## Windows:
+
 Install the following prerequisites:
 
 - [Git for Windows](https://gitforwindows.org/)
