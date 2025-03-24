@@ -288,8 +288,9 @@ After running the script the published build, packages, and reports can be found
 After cloning the template, update the following for your project:
 
 1. Update the author, copyright, and product information in `Common.Product.props`
-2. Rename the solution and project files
-3. Update the build script for the project renames
-4. Update this README
-5. ???
-6. Profit!
+1. Rename the solution and project files
+1. Update the build script for the project renames
+1. Update Visual Studio Code launch settings and tasks
+1. Update this README
+1. ???
+1. Profit!

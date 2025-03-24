@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/Example/bin/Debug/net9.0/linux-x64/Example",
+      "args": [],
+      "cwd": "${workspaceFolder}/src",
+      "stopAtEntry": false
+    }
+  ]
+}
