@@ -3,6 +3,8 @@
     "ms-dotnettools.csharp",
     "editorconfig.editorconfig",
     "streetsidesoftware.code-spell-checker",
-    "redhat.vscode-xml"
+    "redhat.vscode-xml",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint"
   ]
 }

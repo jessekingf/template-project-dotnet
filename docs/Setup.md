@@ -1,6 +1,8 @@
-# Prerequisites
+# Project Setup
 
-## Linux
+## Prerequisites
+
+### Linux
 
 Install the following prerequisites:
 
@@ -9,7 +11,7 @@ Install the following prerequisites:
 - [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
   - Install recommended workspace extensions
 
-## Windows:
+### Windows
 
 Install the following prerequisites:
 
@@ -25,11 +27,12 @@ Install the following prerequisites:
     - [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc)
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
+
     ```shell
     dotnet tool install --global dotnet-reportgenerator-globaltool
     ```
 
-# Build and Publish
+### Build and Publish
 
 Run the following script to build and publish the application:
 

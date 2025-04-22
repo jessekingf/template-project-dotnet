@@ -15,7 +15,7 @@ Goals:
 
 The repository should contain the following general structure.
 
-```
+```text
 .
 |-- docs/
 |   |-- Setup.md
@@ -87,9 +87,9 @@ SDK-Style projects have several advantages over the traditional csproj files:
   - All files in the project directory are automatically included
     - Only files to be excluded are defined in the project file
 - Supports all .NET framework types/versions:
-    - .NET Core
-    - .NET Standard
-    - .NET Framework
+  - .NET Core
+  - .NET Standard
+  - .NET Framework
 - Supports [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools)
   - MSBuild is supported with these project files as well
 - Assembly information contained directly in the project files
@@ -268,8 +268,8 @@ A sample build script is available in the `build` directory that encapsulates al
 1. Builds
 2. Runs unit tests
 3. Generates a test coverage report
-3. Creates NuGet packages
-4. Publishes the build
+4. Creates NuGet packages
+5. Publishes the build
 
 The script is a Bash script for better cross-platform compatibility.
 These commands/script(s) can be integrated into your CI/CD platform of choice.
@@ -288,9 +288,9 @@ After running the script the published build, packages, and reports can be found
 After cloning the template, update the following for your project:
 
 1. Update the author, copyright, and product information in `Common.Product.props`
-1. Rename the solution and project files
-1. Update the build script for the project renames
-1. Update Visual Studio Code launch settings and tasks
-1. Update this README
-1. ???
-1. Profit!
+2. Rename the solution and project files
+3. Update the build script for the project renames
+4. Update Visual Studio Code launch settings and tasks
+5. Update this README
+6. ???
+7. Profit!
