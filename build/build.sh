@@ -2,6 +2,7 @@
 set -e
 
 # Build parameters
+appName=Example
 src=../src
 sln=$src/Example.sln
 mainProj=$src/Example/Example.csproj
@@ -36,9 +37,10 @@ dotnet pack "$sln" -c $config -o "$packagesDir" --no-restore --no-build
 
 # Create distribution
 echo Creating distribution...
-dotnet publish $mainProj -c $config -o "$publishDir"
-rm -f "$publishDir"/*.pdb
-rm -f "$publishDir"/*.xml
+dotnet publish $mainProj -c $config -r linux-x64 -o "$publishDir/$appName-Linux-x64"
+dotnet publish $mainProj -c $config -r win-x64 -o "$publishDir/$appName-Win-x64"
+rm -f "$publishDir"/**/*.pdb
+rm -f "$publishDir"/**/*.xml
 
 # Build succeeded
 echo Build successful
