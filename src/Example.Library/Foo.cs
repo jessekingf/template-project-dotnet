@@ -1,4 +1,4 @@
-﻿namespace Example.Library;
+namespace Example.Library;
 
 /// <summary>
 /// A sample class in a library project.

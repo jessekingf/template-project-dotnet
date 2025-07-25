@@ -1,4 +1,4 @@
-﻿namespace Example.Library.Tests;
+namespace Example.Library.Tests;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
