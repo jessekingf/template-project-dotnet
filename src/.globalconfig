@@ -37,3 +37,10 @@ dotnet_diagnostic.CA2227.severity = suggestion
 
 # SA1633: File should have header
 dotnet_diagnostic.SA1633.severity = none
+
+# Disable XML documentation requirements
+#dotnet_diagnostic.CS1591.severity = none
+#dotnet_diagnostic.SA1600.severity = none
+#dotnet_diagnostic.SA1601.severity = none
+#dotnet_diagnostic.SA1602.severity = none
+#dotnet_diagnostic.SA1633.severity = none
