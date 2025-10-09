@@ -1,6 +1,18 @@
 {
-  "[json]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true
-  }
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.insertFinalNewline": true,
+  "files.encoding": "utf8",
+  "[csharp]": {
+    "editor.tabSize": 4,
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.wordWrap": "off",
+  },
+  "xml.format.maxLineWidth": 0
 }
