@@ -2,16 +2,26 @@
 
 #### All files ####
 [*]
-tab_width = 2
-indent_size = 2
+tab_width = 4
+indent_size = 4
 indent_style = space
 insert_final_newline = true
 charset = utf-8
 
+#### XML project files ####
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
+indent_size = 2
+
+#### Config files ####
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct,json,xml,pubxml}]
+indent_size = 2
+
+#### Web and markup files ####
+[*.{htm,html,js,ts,css,xaml,axaml}]
+indent_size = 2
+
 #### C# files ####
 [*.cs]
-tab_width = 4
-indent_size = 4
 
 #### .NET Coding Conventions ####
 
