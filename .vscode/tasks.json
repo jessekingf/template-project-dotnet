@@ -9,7 +9,7 @@
         "build",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary",
-        "${workspaceFolder}/src/Example.sln"
+        "src/Example.sln"
       ],
       "group": {
         "kind": "build",
