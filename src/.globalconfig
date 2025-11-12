@@ -1,4 +1,4 @@
-﻿is_global = true
+is_global = true
 
 #### C# Analyzer Rules ####
 
@@ -35,12 +35,12 @@ dotnet_diagnostic.CA2008.severity = none
 # CA2227: Collection properties should be read only
 dotnet_diagnostic.CA2227.severity = suggestion
 
-# SA1633: File should have header
-dotnet_diagnostic.SA1633.severity = none
+# MSTEST0001: Explicitly enable or disable tests parallelization
+dotnet_diagnostic.MSTEST0001.severity = none
 
 # Disable XML documentation requirements
 #dotnet_diagnostic.CS1591.severity = none
 #dotnet_diagnostic.SA1600.severity = none
 #dotnet_diagnostic.SA1601.severity = none
 #dotnet_diagnostic.SA1602.severity = none
-#dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1633.severity = none
