@@ -4,7 +4,7 @@ set -e
 # Build parameters
 appName=Example
 src=../src
-sln=$src/Example.sln
+sln=$src/Example.slnx
 mainProj=$src/Example/Example.csproj
 
 dist=../dist

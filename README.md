@@ -37,7 +37,7 @@ The repository should contain the following general structure.
 |   |-- Common.Product.props
 |   |-- Common.Tests.props
 |   |-- Directory.Build.props
-|   |-- Example.sln
+|   |-- Example.slnx
 |-- test/
 |-- .gitignore
 |-- LICENSE.txt
@@ -187,7 +187,7 @@ All commands are assumed to be run from the root of the repository.
 To build the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build):
 
 ```shell
-dotnet build src/Example.sln
+dotnet build src/Example.slnx
 ```
 
 Note that `dotnet build` will automatically [restore packages](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore).
@@ -197,7 +197,7 @@ Note that `dotnet build` will automatically [restore packages](https://docs.micr
 To run all unit tests in the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test):
 
 ```shell
-dotnet test src/Example.sln
+dotnet test src/Example.slnx
 ```
 
 ### Test Coverage
@@ -206,7 +206,7 @@ A code coverage report can be generated with [Coverlet](https://github.com/toner
 
 ```shell
 rm -rf dist/Coverage
-dotnet test src/Example.sln --collect "XPlat Code Coverage" --results-directory "dist/Coverage" --settings "coverlet.runsettings"
+dotnet test src/Example.slnx --collect "XPlat Code Coverage" --results-directory "dist/Coverage" --settings "coverlet.runsettings"
 ```
 
 This generates a [Cobertura](https://github.com/cobertura/cobertura) report (XML) for each project.
@@ -240,7 +240,7 @@ Project settings:
 To build the packages for the solution with [Dotnet CLI](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli):
 
 ```shell
-dotnet pack src/Example.sln -o "dist/Packages"
+dotnet pack src/Example.slnx -o "dist/Packages"
 ```
 
 [dotnet nuget push](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push) can then be used to publish the packages to the desired server.

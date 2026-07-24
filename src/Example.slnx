@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../.gitignore" />
+    <File Path="../build/build.sh" />
+    <File Path="../LICENSE.txt" />
+    <File Path="../README.md" />
+    <File Path="../version.json" />
+    <File Path=".editorconfig" />
+    <File Path=".globalconfig" />
+    <File Path="Common.Product.props" />
+    <File Path="Common.Tests.props" />
+    <File Path="coverlet.runsettings" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Solution Items/Docs/">
+    <File Path="../docs/Setup.md" />
+  </Folder>
+  <Project Path="Example.Library.Tests/Example.Library.Tests.csproj" />
+  <Project Path="Example.Library/Example.Library.csproj" />
+  <Project Path="Example/Example.csproj" />
+</Solution>
