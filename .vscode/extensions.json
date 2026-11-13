@@ -1,10 +1,11 @@
 {
   "recommendations": [
+    "ms-dotnettools.csdevkit",
     "ms-dotnettools.csharp",
     "streetsidesoftware.code-spell-checker",
     "redhat.vscode-xml",
     "yzhang.markdown-all-in-one",
     "davidanson.vscode-markdownlint",
-    "timheuer.resx-editor"
+    "timheuer.resx-editor",
   ]
 }

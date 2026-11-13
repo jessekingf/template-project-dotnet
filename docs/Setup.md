@@ -13,7 +13,7 @@ Install the following prerequisites:
   - Workloads:
     - .NET desktop development
   - Individual components:
-    - .NET 10.0 Runtime
+    - .NET 11.0 Runtime
 - [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
   - Install via the following command once .NET Core is installed:
 
@@ -25,8 +25,8 @@ Install the following prerequisites:
 
 Install the following prerequisites:
 
-- [Git](https://git-scm.com/downloads)
-- [.NET 10.0 SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux)
+- [Git](https://git-scm.com/install/linux)
+- [.NET 11.0 SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux)
 - [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
   - Install recommended workspace extensions
 
